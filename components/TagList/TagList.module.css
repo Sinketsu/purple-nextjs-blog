@@ -1,0 +1,13 @@
+.container {
+	display: flex;
+
+	min-height: 1lh;
+
+	font-size: var(--ts-s);
+}
+
+.container>*+*::before {
+	margin: 0 5px;
+
+	content: "·";
+}

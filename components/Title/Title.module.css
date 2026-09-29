@@ -1,0 +1,6 @@
+.title {
+	color: var(--c-black);
+
+	font-size: var(--ts-xl);
+	font-weight: 700;
+}
