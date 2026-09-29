@@ -1,0 +1,13 @@
+.button {
+	cursor: pointer;
+
+	border: none;
+	background: none;
+
+	font: inherit;
+	font-size: var(--ts-s);
+}
+
+.color_primary {
+	color: var(--c-primary);
+}

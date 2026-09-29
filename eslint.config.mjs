@@ -13,7 +13,6 @@ const eslintConfig = defineConfig([
     },
     rules: {
       semi: "off",
-      "@stylistic/semi": "warn",
       "@typescript-eslint/no-empty-object-type": [
         "error",
         {
@@ -23,9 +22,7 @@ const eslintConfig = defineConfig([
       ],
     },
   },
-  // Override default ignores of eslint-config-next.
   globalIgnores([
-    // Default ignores of eslint-config-next:
     ".next/**",
     "out/**",
     "build/**",
