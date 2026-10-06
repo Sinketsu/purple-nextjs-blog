@@ -1,0 +1,21 @@
+.container {
+	display: flex;
+	align-items: center;
+	gap: 2px;
+	cursor: pointer;
+}
+
+.container:hover .image {
+	stroke: var(--c-primary);
+}
+
+.image {
+	transform: translateY(-1px);
+	fill: none;
+	stroke: #808080;
+}
+
+.pressed {
+	fill: var(--c-primary);
+	stroke: var(--c-white);
+}

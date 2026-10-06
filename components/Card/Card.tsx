@@ -8,6 +8,7 @@ import Image from 'next/image';
 import type { StaticImport } from 'next/dist/shared/lib/get-img-props';
 import type { ComponentProps } from 'react';
 import classNames from 'classnames';
+import LikeButton from '../LikeButton/LikeButton';
 
 export interface CardProps extends ComponentProps<'div'> {
     title: string
@@ -16,6 +17,8 @@ export interface CardProps extends ComponentProps<'div'> {
     text: string
     duration?: string
     tags?: string[]
+    likes?: number
+    liked?: boolean
     onClick?: () => void
 }
 
@@ -27,14 +30,21 @@ const Card = ({
     duration,
     tags = [],
     onClick,
+    likes,
+    liked,
     className,
     ...rest
 }: CardProps): JSX.Element => {
+    const cardTags = tags.length < 3 ? tags : [...tags.slice(0, 2), `+${tags.length - 2}`]
+
     return (
         <div className={classNames(styles.card, className)} {...rest}>
             <Image src={image} alt={imageAlt} loading='eager' />
             <div className={styles.body}>
-                <TagList values={tags} />
+                <div className={styles.header}>
+                    <TagList values={cardTags} />
+                    <LikeButton pressed={liked} current={likes} />
+                </div>
                 <Title text={title} />
                 <Text size='m' text={text} />
             </div>
