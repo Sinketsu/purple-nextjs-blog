@@ -39,7 +39,7 @@ const Card = ({
 
     return (
         <div className={classNames(styles.card, className)} {...rest}>
-            <Image src={image} alt={imageAlt} loading='eager' />
+            <Image src={image} alt={imageAlt} loading='eager' className={styles.image} />
             <div className={styles.body}>
                 <div className={styles.header}>
                     <TagList values={cardTags} />

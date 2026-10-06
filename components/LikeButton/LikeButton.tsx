@@ -14,10 +14,11 @@ interface LikeButtonProps extends ComponentProps<'div'> {
 const LikeButton = ({
     current = 0,
     pressed = false,
-    onClick
+    onClick,
+    className
 }: LikeButtonProps): JSX.Element => {
     return (
-        <div className={styles.container} onClick={onClick}>
+        <div className={classNames(styles.container, className)} onClick={onClick}>
             <Text text={current.toString()} />
             <LikeIcon role='img' aria-label='Поставить лайк' className={classNames(styles.image, pressed && styles.pressed)} />
         </div>
