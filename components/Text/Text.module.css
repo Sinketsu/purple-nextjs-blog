@@ -1,0 +1,17 @@
+.text {
+	color: var(--c-black-20);
+
+	font-weight: 400;
+}
+
+.s {
+	font-size: var(--ts-s);
+}
+
+.m {
+	font-size: var(--ts-m);
+}
+
+.l {
+	font-size: var(--ts-l);
+}

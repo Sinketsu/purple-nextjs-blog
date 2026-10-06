@@ -8,6 +8,7 @@
         "@stylistic/stylelint-plugin"
     ],
     "rules": {
+        "selector-class-pattern": null,
         "@stylistic/indentation": "tab",
         "@stylistic/color-hex-case": "upper"
     }

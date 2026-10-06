@@ -1,0 +1,43 @@
+.card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	width: 350px;
+	height: 400px;
+
+	padding: 9px;
+
+	border: 1px solid;
+	border-color: var(--c-border);
+	border-radius: 5px;
+}
+
+.image {
+	height: 200px;
+
+	border-radius: 5px;
+
+	background-color: aqua;
+}
+
+.body {
+	height: 130px;
+}
+
+.header {
+	display: grid;
+	align-items: center;
+	grid-template-columns: 1fr max-content;
+}
+
+.footer {
+	display: flex;
+	justify-content: space-between;
+
+	height: 20px;
+}
+
+.button {
+	margin-left: auto;
+}
